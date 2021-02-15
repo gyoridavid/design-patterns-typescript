@@ -1,0 +1,3 @@
+# Adapter pattern
+
+![](adapter.png)
