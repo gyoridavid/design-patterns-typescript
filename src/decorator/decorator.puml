@@ -22,9 +22,9 @@ class ConcreteDecoratorB {
     + operation()
 }
 
-Component <|-- ConcreteComponent
+Component <|- ConcreteComponent
 Component <|-- Decorator
-Decorator o-- Component
+Decorator *-- Component::operation
 Decorator <|-- ConcreteDecoratorA
 Decorator <|-- ConcreteDecoratorB
 
