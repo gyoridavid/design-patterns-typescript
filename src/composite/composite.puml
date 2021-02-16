@@ -1,0 +1,25 @@
+@startuml
+
+class Client {}
+
+interface Component {
+    + execute()
+}
+
+class Leaf {
+    + execute()
+}
+
+class Composite {
+    - children: Component[]
+    + addChild(c: Component)
+    + removeChild(c: Component)
+    + execute()
+}
+
+Leaf -[dotted]-|> Component
+Composite -[dotted]-|> Component
+Composite o--> Component
+Client -> Component
+
+@enduml

@@ -1,0 +1,3 @@
+# Composite pattern
+
+![](composite.png)

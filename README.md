@@ -1,4 +1,7 @@
 # design-patterns-typescript
 
-[Adapter pattern](./src/adapter)
-[Decorator pattern](./src/decorator)
+## Structural design patterns
+
+- [Adapter pattern](./src/adapter)
+- [Composite pattern](./src/composite)  
+- [Decorator pattern](./src/decorator)
