@@ -24,13 +24,9 @@ Adapter <|-- ConcreteAdapter
 ConcreteAdapter -> Adaptee
 
 note as N1
-    <b><color:royalBlue>Adapter</color></b>
-    <b>Type:</b> Structural
     Convert the interface of a class into
-    another interface clients expect. Lets
-    classes work together that couldn't
-    otherwise because of incompatible
-    interfaces.
+    another interface clients expect by wrapping
+    it and implementing the other interface
 end note
 
 @enduml

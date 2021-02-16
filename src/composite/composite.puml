@@ -22,4 +22,14 @@ Composite -[dotted]-|> Component
 Composite o--> Component
 Client -> Component
 
+note left of Composite
+    delegate work
+    to children
+    components
+end note
+
+note bottom of Leaf
+    do some work
+end note
+
 @enduml

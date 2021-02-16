@@ -28,4 +28,9 @@ Decorator *-- Component::operation
 Decorator <|-- ConcreteDecoratorA
 Decorator <|-- ConcreteDecoratorB
 
+note right of Decorator
+    adds extra functionality
+    to the interface
+endnote
+
 @enduml
