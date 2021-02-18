@@ -1,0 +1,33 @@
+@startuml
+
+namespace Abstraction {
+    interface Abstraction {
+        +Implementor
+        +Operation()
+    }
+
+    class RefinedAbstraction {
+        +Operation()
+    }
+
+    RefinedAbstraction -up--|> Abstraction
+}
+
+namespace Implementation {
+    interface Implementor {
+        +Operation()
+    }
+
+    class ConcreteImplementorA {
+        +Operation()
+    }
+    class ConcreteImplementorB {
+        +Operation()
+    }
+
+    Abstraction.Abstraction *-> Implementation.Implementor: composition
+    ConcreteImplementorA -up--|> Implementor
+    ConcreteImplementorB -up--|> Implementor
+}
+
+@enduml
