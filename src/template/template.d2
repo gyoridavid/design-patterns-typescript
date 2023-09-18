@@ -1,0 +1,31 @@
+CVParser {
+    shape: class
+
+    openFile(path: string): void
+    closeFile(): void
+    processFile(): unifiedCV
+}
+
+CVParserPDF {
+    shape: class
+
+    processFile(): unifiedCV
+}
+
+CVParserDoc {
+    shape: class
+
+    processFile(): unifiedCV
+}
+
+CVParserDoc -> CVParser : extend {
+    style: {
+        stroke-dash: 3
+    }
+}
+
+CVParserPDF -> CVParser : extend {
+    style: {
+        stroke-dash: 3
+    }
+}
