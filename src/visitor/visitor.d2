@@ -1,0 +1,88 @@
+IVisitor {
+    shape: class
+    label: Visitor <<interface>>
+    
+    +visit(elementA: ElementA)
+
+    +visit(elementB: ElementB)
+    
+    +visit(elementC: ElementC)
+}
+
+IElement {
+    shape: class
+    label: Element <<interface>>
+
+    accept(visitor: IVisitor)
+}
+
+IVisitor -> IElement {
+    style: {
+        stroke-dash: 3
+    }
+}
+
+Visitor {
+    shape: class
+    label: Visitor
+
+    +visit(elementA: ElementA)
+
+    +visit(elementB: ElementB)
+    
+    +visit(elementC: ElementC)
+}
+
+Visitor -> IVisitor: implements {
+    style: {
+        stroke-dash: 3
+    }
+}
+
+ElementA {
+    shape: class
+    featureA()
+    accept(v: IVisitor)
+}
+
+ElementB {
+    shape: class
+    featureB()
+    accept(v: IVisitor)
+}
+
+ElementC {
+    shape: class
+    featureC()
+    accept(v: IVisitor)
+}
+
+ElementA -> IElement: implements {
+    style: {
+        stroke-dash: 3
+    }
+}
+
+ElementB -> IElement: implements {
+    style: {
+        stroke-dash: 3
+    }
+}
+
+ElementC -> IElement: implements {
+    style: {
+        stroke-dash: 3
+    }
+}
+
+|typescript
+    v.visit(this);
+| -> ElementA
+
+|typescript
+    v.visit(this);
+| -> ElementB
+
+|typescript
+    v.visit(this);
+| -> ElementC

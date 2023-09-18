@@ -9,3 +9,7 @@
 - Facade pattern
 - Flyweight pattern
 - [Proxy pattern](./src/proxy)
+
+## Behavioral design patterns
+
+- [Visitor pattern](./src/visitor)
