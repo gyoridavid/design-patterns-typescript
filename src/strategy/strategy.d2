@@ -1,0 +1,42 @@
+IExport {
+    shape: class
+    export(): Buffer
+}
+
+PDFExport {
+    shape: class
+    export(): Buffer
+}
+
+SVGExport {
+    shape: class
+    export(): Buffer
+}
+
+Component {
+    shape: class
+    Component(exportStrategy: IExport)
+    exportStrategy: IExport
+    setExporter(exportStrategy: IExport): void
+    export(): Buffer
+}
+
+Component <-> IExport {
+    source-arrowhead: {
+        shape: diamond
+        style: {
+            filled: false
+        }
+    }
+}
+PDFExport -> IExport {
+    style: {
+        stroke-dash: 3
+    }
+}
+
+SVGExport -> IExport {
+    style: {
+        stroke-dash: 3
+    }
+}
