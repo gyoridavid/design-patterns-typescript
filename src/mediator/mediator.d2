@@ -1,0 +1,38 @@
+IMediator {
+    shape: class
+    label: "Mediator <<interface>>"
+    notify(sender: Component, event: object): void 
+}
+
+Page {
+    shape: class
+    button: Button
+    notify(sender: Component, event: object): void
+}
+
+Component {
+    shape: class
+    label: "Component"
+    Component(controller: IMediator)
+    controller: IMediator
+}
+
+Button {
+    shape: class
+    click(): void
+}
+
+Page -> IMediator {
+    style: {
+        stroke-dash: 3
+    }
+}
+Button -> Component
+Page <-> Button {
+    source-arrowhead: * {
+        shape: diamond
+        style: {
+            filled: true
+        }
+    }
+}

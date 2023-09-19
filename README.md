@@ -14,3 +14,4 @@
 
 - [Visitor pattern](./src/visitor)
 - [Template method pattern](./src/template)
+- [Mediator pattern](./src/mediator)
